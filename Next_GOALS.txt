@@ -1,0 +1,28 @@
+// 1-->  create a tag bar like jio cenema 
+
+2-> onclick of logo or home , all the filre will remove and the besic useEffect call exexute { help of context api} [ done [13]]
+
+// 3 -- > modift the creaate and edit  post tag part  
+
+// 4 -- > Handle all the default submit { if there is no data passed by user then dont pass that form to backed } [no needd to do taht]
+
+5--> implement the comment section        [done]
+
+//6--> implement the like part in each post '[which shows the current like of that post like LeetCode]
+
+7--> create a filter btn { popular , latesest eetc..}
+
+8--> build a author page where all the post will come [like todo ]
+
+9--> Admin Dash Board
+
+10--> send to home|login page for any unindetified route
+
+11-> build the contact page adn eamil part using smtp
+
+
+// 12--> logout part
+
+//13 -> when the page reload previous search data is lost , we go bak to home page [ showing all data]
+
+// Cascade Del [ if one post del the all the comment of that post will be deleted]
