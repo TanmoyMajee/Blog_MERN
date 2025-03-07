@@ -106,7 +106,7 @@ app.get('/postdata/:id',async (req,res)=>{
   let {id}=req.params
   let Post=await PostMode.findById(id).populate('user',['name','email','image']) // here we are sending all the post model data and user data [name,email,image] 
   res.json(Post)
-})
+}) 
 
 app.get((req,res)=>{
   res.send(`<h1> Page Not Found</h1>`)
@@ -114,4 +114,4 @@ app.get((req,res)=>{
 
 app.listen(process.env.PORT,()=>{
   console.log(`App is Listining at port : ${process.env.PORT}`)
-})
+}) 

@@ -8,8 +8,22 @@ const UserModel = require('../Models/user')
 LogoutRoute.use(cookieparser());
 const TokenVerify = require('../MiddleWare/tokenVerify')
 
-LogoutRoute.post('/logout',async (req,res)=>{
-  const token=req.cookies.token;
+LogoutRoute.get('/logout',async (req,res)=>{
+
+    try {
+    // Do not alter req.session – simply clear the cookie with explicit options.
+    res.clearCookie("Authorization", { 
+      httpOnly: true,
+      secure: true,          // force secure in production
+      sameSite: "None",
+      path: "/",             // ensure the path matches the login cookie
+    });
+    res.sendStatus(200);
+  } catch (err) {
+    console.error(err.message);
+    res.sendStatus(400);
+  }
+  // const token=req.cookies.token;
   // console.log(token)
   // let tk = "abced"
   // let token1
@@ -21,7 +35,7 @@ LogoutRoute.post('/logout',async (req,res)=>{
   //   expires: new Date(0)
   // }).json('Logout') 
   
-  res.clearCookie('token',{ path: '/' }).json('Logout') 
+  // res.clearCookie('token',{ path: '/' }).json('Logout') 
   // userone = await UserModel.findOne({_id:id})
   //  await userone.save()
   // res.status(200).send({ message: 'Logout successful' })

@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
   // Function to log out the user and clear user data  withCredentials
   const handleLogout = async () => {
     try {
-      const info = await axios.post('http://localhost:3000/logout', {  withCredentials: true });
+      const info = await axios.get('http://localhost:3000/logout', {  withCredentials: true });
       // console.log(info)
       setLoggedIn(false);  // Set logged-in state to false
       setUser(null);       // Clear the user data

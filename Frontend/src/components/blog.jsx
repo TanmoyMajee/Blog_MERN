@@ -1,47 +1,5 @@
 
 
-// import React from 'react';
-// import { compareAsc, format } from "date-fns";
-// import { Link } from 'react-router-dom';
-
-// const Blog = ({_id,title,about,post_pic,user,createdAt}) => {
-//   return (
-//     <div className="bg-slate-400 rounded-xl shadow-md overflow-hidden max-w-xs w-full my-4 mx-auto">
-//       <div>
-//         {/* Blog Image */}
-//         <Link to={`/postpage/${_id}`}>
-//         <img
-//           className="h-48 w-full object-cover"
-//           src={post_pic}
-//           alt="Blog"
-//         />
-//         </Link>
-//         {/* Blog Content */}
-//         <div className="p-4">
-//         <Link to={`/postpage/${_id}`}>
-//           <h2 className="text-lg font-semibold text-gray-900 mb-2">
-//           {/* Blog Content */}
-//           {title}
-//           </h2>
-//           </Link>
-//           <p className="text-gray-600">
-//           {/* Blog Owner name */}
-//           Blog Author : {user.name}
-//           </p>
-//           <p className="text-gray-600">
-//           {/* Blog about || summary */}
-//           {about}
-//           </p>
-//           <time className="text-gray-600">
-//           {/* Created At */}
-//           CreatedAt : {format(new Date(createdAt), "MMM d,yyyy HH:mm")}
-//           </time>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 // export default Blog;
 import React from 'react';
 import { format } from 'date-fns';

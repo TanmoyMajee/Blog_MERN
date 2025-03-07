@@ -20,7 +20,12 @@ RegisterRouter.post('/register',async (req,res)=>{
           // res.send('registration succesfull',user)
           res.status(201).json({
             message: 'Registration successful',
-            user: user
+            // here i need to send the user data to the front end but i will not send the password
+            user: {
+              name: user.name,
+              email: user.email,
+              image: user.image
+            }
           });
         }else{
           // res.send("Registraaiton err")
