@@ -8,9 +8,17 @@ const PostMode = require('./Models/post')
 const CommentModel = require('./Models/comnts')
 const cookieparser = require('cookie-parser')
 app.use(cookieparser())
+// app.use(cors({
+//   origin: 'http://localhost:5173',  // The frontend's domain
+//   credentials: true  // Allow cookies and credentials to be sent
+// }));
+const cors = require('cors');
+
+const allowedOrigin = process.env.ALLOWED_ORIGIN || 'http://localhost:5173';
+
 app.use(cors({
-  origin: 'http://localhost:5173',  // The frontend's domain
-  credentials: true  // Allow cookies and credentials to be sent
+  origin: allowedOrigin,
+  credentials: true
 }));
 const multer  = require('multer')
 const bcrypt = require('bcryptjs'); 
