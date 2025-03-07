@@ -37,7 +37,7 @@ console.log(URL)
     // Add form submission logic here
       // Axios request with multipart/form-data
       try {
-        const response = await axios.post('http://localhost:3000/register', {userName,userEmail,userPass,URL}, {
+        const response = await axios.post('https://blog-mern-backend-x81a.onrender.com/register', {userName,userEmail,userPass,URL}, {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -54,7 +54,7 @@ console.log(URL)
         console.error('Error uploading image:', error);
       }
     };
-  //  await axios.post('http://localhost:3000/register',formData,{userName,userEmail,userPass,userPic})
+  //  await axios.post('https://blog-mern-backend-x81a.onrender.com/register',formData,{userName,userEmail,userPass,userPic})
   //   .then((result)=>{console.log(result)})
   //   .catch((err)=>{console.log(err)})
   // };

@@ -12,7 +12,7 @@
 
 //   // Fetch all the Commentts of that post
 //   // useEffect(async ()=>{
-//   //         // let response=await axios.get('http://localhost:3000/get-comments')
+//   //         // let response=await axios.get('https://blog-mern-backend-x81a.onrender.com/get-comments')
 //   //         // console.log(response);
 //   // },[recentComnt]) // Dependesy will be when i submit the form then 
 
@@ -27,7 +27,7 @@
 //     }
 //     else{
 //     // Call API to post new comment
-//     let response=await axios.post('http://localhost:3000/new-comment',{newComment,user,Post_ID})
+//     let response=await axios.post('https://blog-mern-backend-x81a.onrender.comkend-x81a.onrender.com/new-comment',{newComment,user,Post_ID})
 
 //     // If successful, add the new comment to the existing list
 //     if (response.success) {
@@ -89,7 +89,7 @@ const Comments = ({ Post_ID }) => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        let response = await axios.get(`http://localhost:3000/get-comments/${Post_ID}`);
+        let response = await axios.get(`https://blog-mern-backend-x81a.onrender.com/get-comments/${Post_ID}`);
         // console.log(response)
         setComments(response.data.comments);
       } catch (error) {
@@ -106,7 +106,7 @@ const Comments = ({ Post_ID }) => {
       alert("Enter something");
     } else {
       try {
-        let response = await axios.post('http://localhost:3000/new-comment', { newComment, user, Post_ID });
+        let response = await axios.post('https://blog-mern-backend-x81a.onrender.com/new-comment', { newComment, user, Post_ID });
 
         if (response.data.success) {
           setNewComment(''); // Clear input
@@ -120,7 +120,7 @@ const Comments = ({ Post_ID }) => {
 
   const deleteCommnt =async (commntId)=>{
     try {
-     let res =await axios.post(`http://localhost:3000/delete-comment/${commntId}`,{},{ withCredentials: true })
+     let res =await axios.post(`https://blog-mern-backend-x81a.onrender.com/delete-comment/${commntId}`,{},{ withCredentials: true })
     //  console.log(res)
      setDelCommnt(!delCommnt)
     } catch (error) {

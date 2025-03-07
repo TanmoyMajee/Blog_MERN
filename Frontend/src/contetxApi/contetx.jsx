@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
   // Function to log out the user and clear user data  withCredentials
   const handleLogout = async () => {
     try {
-      const info = await axios.get('http://localhost:3000/logout', {  withCredentials: true });
+      const info = await axios.get('https://blog-mern-backend-x81a.onrender.com/logout', {  withCredentials: true });
       // console.log(info)
       setLoggedIn(false);  // Set logged-in state to false
       setUser(null);       // Clear the user data
@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const info = await axios.get('http://localhost:3000/profile', { withCredentials: true });
+        const info = await axios.get('https://blog-mern-backend-x81a.onrender.com/profile', { withCredentials: true });
         if(info)setUser(info.data);  // Set user data if session is valid
         if(info)setLoggedIn(true);   // Mark user as logged in
       } catch (error) {

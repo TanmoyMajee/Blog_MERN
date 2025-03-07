@@ -23,7 +23,7 @@ const BlogPage = () => {
   // useEffect(() => {
   //   const fetchData = async () => {
   //     try {
-  //       const response = await axios.get(`http://localhost:3000/get-post/?page=${page}`);
+  //       const response = await axios.get(`https://blog-mern-backend-x81a.onrender.com/get-post/?page=${page}`);
   //       const postData = response.data;
   //       setAllPost(postData.posts);
   //       setTotalPost(postData.totalPosts);
@@ -51,7 +51,7 @@ const BlogPage = () => {
   useEffect(() => {
     // if (shouldFetch) {  // Only fetch if shouldFetch is true
       axios
-        .get(`http://localhost:3000/get-post/?page=${page}&title=${globatTitl}&genre=${genre}`)
+        .get(`https://blog-mern-backend-x81a.onrender.com/get-post/?page=${page}&title=${globatTitl}&genre=${genre}`)
         .then((response) => {
           const postData = response.data;
           setAllPost(postData.posts);

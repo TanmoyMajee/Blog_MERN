@@ -9,7 +9,7 @@ function contact_us() {
   const navigate = useNavigate();
   const submitFun =async (e)=>{
     e.preventDefault();
-    let res =await axios.post('http://localhost:3000/contact_us',{name,email,message})
+    let res =await axios.post('https://blog-mern-backend-x81a.onrender.com/contact_us',{name,email,message})
     console.log(res)
     setName('')
     setEmail('')

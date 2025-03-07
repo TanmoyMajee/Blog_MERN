@@ -53,7 +53,7 @@ console.log(URL)
     //   console.log(`${key}: ${value}`);
     // }
 
-    let response = await axios.post('http://localhost:3000/post', {title,about,description,URL}, {
+    let response = await axios.post('https://blog-mern-backend-x81a.onrender.com/post', {title,about,description,URL}, {
       headers: {'Content-Type': 'application/json'},
       withCredentials:true
     });

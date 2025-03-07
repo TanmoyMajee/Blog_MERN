@@ -23,7 +23,7 @@ const CreatePost = () => {
   //  SO every time page reload we fecth the data from backend by using useeddect
 const {id} = useParams()
 useEffect(()=>{
-  axios.get(`http://localhost:3000/postdata/${id}`)
+  axios.get(`https://blog-mern-backend-x81a.onrender.com/postdata/${id}`)
   .then((response) => {
     console.log(response.data);
     // setPostInfo(response.data);
@@ -69,7 +69,7 @@ useEffect(()=>{
 // // console.log(image)
 
 
-    //  axios.post(`http://localhost:3000/editpost/${id}`, {title,about,description,URL}, {
+    //  axios.post(`https://blog-mern-backend-x81a.onrender.com/editpost/${id}`, {title,about,description,URL}, {
     //   headers: {'Content-Type': 'application/json'},
     //   withCredentials:true
     // }).then(()=>{
@@ -80,7 +80,7 @@ useEffect(()=>{
     // console.log(response.status);
     try {
       // Send the update request
-      const response = await axios.post(`http://localhost:3000/editpost/${id}`, {
+      const response = await axios.post(`https://blog-mern-backend-x81a.onrender.com/editpost/${id}`, {
         title,
         about,
         description,

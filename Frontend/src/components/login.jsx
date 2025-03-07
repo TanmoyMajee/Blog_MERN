@@ -15,13 +15,13 @@
 //   const handleSubmit =async (e) => {
 //     e.preventDefault();
 //     // Handle login form submission
-//     let user=await axios.post('http://localhost:3000/login',{email,password},{withCredentials:true})
+//     let user=await axios.post('https://blog-mern-backend-x81a.onrender.com/login',{email,password},{withCredentials:true})
 //     // console.log(user);
 //     // console.log(user.respose)
 //     // console.log(user.config.data)
 //     if(user.data=='ok'){   //as ok isin inside data so... user.data
 //       // this part dont kmow why i ma fecting data from token , as i should pass user info from backed and based on that data , user will show , but its not working so...
-//       const userInfo = await axios.get('http://localhost:3000/profile', { withCredentials: true });
+//       const userInfo = await axios.get('https://blog-mern-backend-x81a.onrender.com/profile', { withCredentials: true });
 //         loginContex(userInfo.data);  // Pass the fetched user data to the context
 //         setRedirect(true);
 //       // loginContex(user); 
@@ -121,9 +121,9 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const user = await axios.post('http://localhost:3000/login', { email, password }, { withCredentials: true });
+      const user = await axios.post('https://blog-mern-backend-x81a.onrender.com/login', { email, password }, { withCredentials: true });
       if (user.data.message === 'ok') {
-        const userInfo = await axios.get('http://localhost:3000/profile', { withCredentials: true });
+        const userInfo = await axios.get('https://blog-mern-backend-x81a.onrender.com/profile', { withCredentials: true });
         loginContex(userInfo.data);  // Pass the fetched user data to the context
         setRedirect(true);
       } else {

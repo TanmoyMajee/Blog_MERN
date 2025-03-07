@@ -15,7 +15,7 @@ const PostPage = () => {
   // console.log(user)
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/postdata/${id}`)
+    axios.get(`https://blog-mern-backend-x81a.onrender.com/postdata/${id}`)
       .then((response) => {
         // console.log(response.data);
         setPostInfo(response.data);
@@ -33,7 +33,7 @@ const PostPage = () => {
   //     .catch()
   // }
   let deleteFun =()=>{
-    axios.post(`http://localhost:3000/deletePost`,{id},{ withCredentials: true })
+    axios.post(`https://blog-mern-backend-x81a.onrender.com/deletePost`,{id},{ withCredentials: true })
     .then((res)=>{
       if(res.data == 'ok'){
         setRedirect(true)
