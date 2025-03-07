@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+     "postinstall": "mv node_modules/gopd/gopd.js node_modules/gopd/gOPD.js || true",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
