@@ -1,6 +1,6 @@
 const express = require('express')
 const RegisterRouter = express.Router()
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const UserModel = require('../Models/user')
 RegisterRouter.post('/register',async (req,res)=>{
   // destructure the data coming fromregister page

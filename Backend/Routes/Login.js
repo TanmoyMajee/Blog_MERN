@@ -1,7 +1,7 @@
 // // require("dotenv").config()
 // // const express = require('express')
 // // const LoginRoute = express.Router()
-// // const bcrypt = require('bcrypt');
+// // const bcrypt = require('bcryptjs');
 // // const cookieparser = require('cookie-parser')
 // // const jwt = require('jsonwebtoken');
 // // const UserModel = require('../Models/user')
@@ -47,7 +47,7 @@
 // require("dotenv").config();
 // const express = require('express');
 // const LoginRoute = express.Router();
-// const bcrypt = require('bcrypt');
+// const bcrypt = require('bcryptjs'););
 // const jwt = require('jsonwebtoken');
 // const UserModel = require('../Models/user');
 
@@ -90,7 +90,7 @@
  require("dotenv").config();
 const express = require('express');
 const LoginRoute = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const UserModel = require('../Models/user');
 

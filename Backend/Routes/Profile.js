@@ -1,7 +1,7 @@
 require("dotenv").config()
 const express = require('express')
 const ProfileRoute = express.Router()
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const cookieparser = require('cookie-parser')
 const jwt = require('jsonwebtoken');
 const UserModel = require('../Models/user')

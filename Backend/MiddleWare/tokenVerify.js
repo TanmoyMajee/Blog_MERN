@@ -1,7 +1,7 @@
 require("dotenv").config()
 const express = require('express')
 // const TokenVerify = express()
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const UserModel = require('../Models/user')
 const cookieparser = require('cookie-parser')
 const jwt = require('jsonwebtoken');

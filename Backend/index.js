@@ -13,7 +13,7 @@ app.use(cors({
   credentials: true  // Allow cookies and credentials to be sent
 }));
 const multer  = require('multer')
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); 
 const jwt = require('jsonwebtoken');
 // const key = 'DKJHSKJHDKJSKJ12345';
 
