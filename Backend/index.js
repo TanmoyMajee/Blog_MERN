@@ -2,7 +2,7 @@ require("dotenv").config()
 // import express from 'express';
 const express = require('express');
 const app = express();
-const cors = require('cors');
+// const cors = require('cors');
 const UserModel = require('./Models/user')
 const PostMode = require('./Models/post')
 const CommentModel = require('./Models/comnts')
