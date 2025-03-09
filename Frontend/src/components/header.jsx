@@ -99,7 +99,17 @@ const Header = () => {
           <Link to="/contact" className="block py-2 hover:underline">Contact</Link>
           {isLoggedIn ? (
             <>
-              <Link to="/profile" className="block py-2 hover:underline">Profile</Link>
+              {/* <Link to="/profile" className="block py-2 hover:underline">Profile</Link> */}
+              {/* ****************** */}
+              <div className="flex items-center space-x-2">
+                <img
+                  src={user.img || "/path/to/default-avatar.png"}
+                  alt="Profile"
+                  className="w-8 h-8 rounded-full"
+                />
+                <span className="font-semibold">{user.name || "Guest"}</span>
+              </div>
+              
               <button
                 onClick={handleLogoutfun}
                 className="w-full bg-red-500 hover:bg-red-700 text-white font-semibold py-2 rounded mt-2"
